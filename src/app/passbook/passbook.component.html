@@ -1,0 +1,26 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Your Transactions</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Send</th>
+            <th>Balance</th>
+            <th>Date</th>
+            <th>Received</th>
+            <th>Receiverid</th>
+            <th>uid</th>
+          </tr> 
+        </thead>
+      <tbody>
+        <tr *ngFor="let transaction of transactions | async">
+          <td>{{ transaction.tid }}</td>
+          <td>{{ transaction.sent }}</td>
+          <td>{{ transaction.balance }}</td>
+          <td>{{ transaction.date }}</td>
+          <td>{{ transaction.received }}</td>
+          <td>{{ transaction.receiverid }}</td>
+          <td>{{ transaction.uid }}</td>

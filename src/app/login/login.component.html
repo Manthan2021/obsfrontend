@@ -1,0 +1,93 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-6  my-auto">
+      <div>
+        <h1 class="text-primary"><b>Account Access<br> Just one Click Away</b></h1>
+
+      </div>
+      <div class="mt-5">
+        <form class="form-group" ngNativeValidate>
+          <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
+          <div class="alert alert-success" *ngIf='loginSuccess'>{{successMessage}}</div>
+          <!-- <div class="form-group mx-3">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control w-75" id="email" [(ngModel)]="email" placeholder="Enter Email Id"
+                      name="email" required>
+                  </div>
+                  <div class="form-group mx-3">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control w-75" [(ngModel)]="password" id="password" placeholder="Enter password"
+                      name="password" required>
+                  </div> -->
+          <div class="container">
+            <button type="button" class="btn btn-info btn-lg text-white fw-bold w-50 fst-italic btn-round"
+              (click)="loginForm()" data-toggle="modal" data-target="#loginModal">
+              Login
+            </button>
+          </div>
+
+          <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <button type="button" id="log" class="btn btn-secondary btn-round" data-toggle="tooltip"
+                    data-placement="top" title="Account">
+                    <i class="far fa-user-circle"></i>
+                  </button>
+                  <div class="form-title text-center">
+                    <h4>Login</h4>
+                  </div>
+                  <div class="d-flex flex-column text-center">
+                    <form>
+                      <div class="form-group my-2">
+
+                        <input type="email" class="form-control" id="email" [(ngModel)]="email" name="email"
+                          placeholder="Your email address...">
+                      </div>
+                      <div class="form-group my-2">
+
+                        <input type="password" class="form-control" [(ngModel)]="password" id="password" name="password"
+                          placeholder="Your password...">
+                      </div>
+                      <button type="button" (click)="checkLogin()"
+                        class="btn btn-info w-50 p-2 text-white fw-bold btn-block btn-round">Login</button>
+                    </form>
+
+                    <div class="text-center text-muted delimiter">or use a social network</div>
+                    <div class="d-flex justify-content-center social-buttons">
+                      <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip"
+                        data-placement="top" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                      </button>
+                      <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip"
+                        data-placement="top" title="Facebook">
+                        <i class="fab fa-facebook"></i>
+                      </button>
+                      <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip"
+                        data-placement="top" title="Linkedin">
+                        <i class="fab fa-linkedin"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div>                    
+                    <button (click)=checkLogin() type="button" class="btn btn-primary p-2 m-3"><span class="m-4">Login Now <i class="fas fa-chevron-right"></i></span></button>
+              </div> -->
+        </form>
+
+
+      </div>
+
+
+
+    </div>
+    <div class="col-6">
+      <img class="image-fluid w-100" src="assets\images\login-img.png">
+    </div>
+  </div>
+</div>
